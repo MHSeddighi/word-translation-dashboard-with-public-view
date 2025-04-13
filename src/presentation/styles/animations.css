@@ -1,0 +1,189 @@
+/* Spinner Styles */
+.spinner {
+  border: 8px solid var(--mui-background-default); /* Light grey background */
+  border-top: 8px solid var(--mui-primary-main); /* Blue spinning part */
+  border-radius: 50%;
+  width: 50px; /* Size of the spinner */
+  height: 50px; /* Size of the spinner */
+  animation: spin 1.5s linear infinite; /* Animation for spinning */
+}
+
+/* Keyframes for spinning effect */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========================================
+   Fade In and Fade Out Transitions
+   ======================================== */
+
+/* Fade In Effect */
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+/* Fade Out Effect */
+.fade-out {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out.hidden {
+  opacity: 0;
+}
+
+/* ========================================
+   Scale / Zoom In and Zoom Out
+   ======================================== */
+
+/* Scale In (Zoom In) Effect */
+.scale-in {
+  transform: scale(0.9);
+  transition: transform 0.3s ease-in-out;
+}
+
+.scale-in:hover {
+  transform: scale(1);
+}
+
+/* Scale Out (Zoom Out) Effect */
+.scale-out {
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.scale-out:hover {
+  transform: scale(0.9);
+}
+
+/* ========================================
+   Slide Transitions (Left, Right, Up, Down)
+   ======================================== */
+
+/* Slide In from Left */
+.slide-in-left {
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-out;
+}
+
+.slide-in-left.visible {
+  transform: translateX(0);
+}
+
+/* Slide In from Right */
+.slide-in-right {
+  transform: translateX(100%);
+  transition: transform 0.5s ease-out;
+}
+
+.slide-in-right.visible {
+  transform: translateX(0);
+}
+
+/* Slide In from Top */
+.slide-in-top {
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-out;
+}
+
+.slide-in-top.visible {
+  transform: translateY(0);
+}
+
+/* Slide In from Bottom */
+.slide-in-bottom {
+  transform: translateY(100%);
+  transition: transform 0.5s ease-out;
+}
+
+.slide-in-bottom.visible {
+  transform: translateY(0);
+}
+
+/* ========================================
+   Color and Background Color Transitions
+   ======================================== */
+
+/* Color Change on Hover */
+.color-change {
+  color: #333;
+  transition: color 0.3s ease-in-out;
+}
+
+.color-change:hover {
+  color: #3498db;
+}
+
+/* Background Color Change on Hover */
+.bg-color-change {
+  background-color: #fff;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.bg-color-change:hover {
+  background-color: #3498db;
+}
+
+/* Background Gradient Change */
+.bg-gradient-change {
+  background: linear-gradient(45deg, #ff7e5f, #feb47b);
+  transition: background 0.5s ease-in-out;
+}
+
+.bg-gradient-change:hover {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+}
+
+/* ========================================
+   Box Shadow Transitions
+   ======================================== */
+
+/* Box Shadow on Hover */
+.shadow-hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.shadow-hover:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================
+   Border Radius Transitions
+   ======================================== */
+
+/* Rounded Corners on Hover */
+.border-radius-hover {
+  border-radius: 10px;
+  transition: border-radius 0.3s ease-in-out;
+}
+
+.border-radius-hover:hover {
+  border-radius: 25px;
+}
+
+/* ========================================
+   Height and Width Transitions
+   ======================================== */
+
+/* Expand on Hover */
+.expand-hover {
+  height: 100px;
+  width: 100px;
+  transition: height 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+.expand-hover:hover {
+  height: 150px;
+  width: 150px;
+}

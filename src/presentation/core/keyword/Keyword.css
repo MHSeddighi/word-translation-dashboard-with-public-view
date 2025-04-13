@@ -1,0 +1,104 @@
+.keyword-card {
+  /* padding: 15px; */
+  /* border: 1px solid var(--mui-divider); */
+  /* border-radius: 12px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  min-width: 0;
+  flex-grow: 1;
+}
+
+.keyword-card__title {
+  padding: 10px;
+  outline: none;
+  font-size: 20px;
+  flex: 1 1 50%;
+  min-width: 100px;
+  color: var(--mui-text-primary);
+  /* border: 1px solid var(--mui-divider); */
+  background-color: var(--mui-background-default);
+  border-radius: 8px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.keyword-card__translation {
+  padding: 10px;
+  outline: none;
+  font-size: 20px;
+  flex: 1 1 50%;
+  min-width: 100px;
+  border: 1px solid var(--mui-divider);
+  background-color: var(--mui-background-paper);
+  border-radius: 8px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+.keyword-card__translation--empty {
+  background-color: var(--mui-error-light);
+}
+
+.keyword-card__translation:focus,
+.keyword-card__translation:active,
+.keyword-card__title:focus,
+.keyword-card__title:active {
+  background-color: var(--mui-background-default);
+  border: 1px solid var(--mui-primary-main);
+}
+
+.keyword-card__translation:hover,
+.keyword-card__title:hover {
+  background-color: var(--mui-background-default);
+}
+
+.management-keyword {
+  gap: 12px;
+  width: 100%;
+  background-color: var(--mui-background-default);
+  border-radius: 12px;
+  padding: 12px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.management-keyword-btn {
+  padding: 12px;
+  border-radius: 12px;
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background-color: var(--mui-primary-main); /* default MUI primary */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: large;
+  font-weight: 900;
+  transition: all 0.3s ease;
+  flex-grow: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.management-keyword-btn:hover {
+  background-color: var(--mui-primary-dark);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.management-keyword-btn:active {
+  background-color: var(--mui-primary-dark);
+  transform: scale(0.98);
+}
+
+.management-keyword-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--mui-primary-light);
+}
+
+.management-keyword-btn:disabled {
+  background-color: var(--mui-text-disabled);
+  color: #9e9e9e;
+  cursor: not-allowed;
+}

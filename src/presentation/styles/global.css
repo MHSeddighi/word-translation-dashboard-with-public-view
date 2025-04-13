@@ -1,0 +1,1500 @@
+@import url(./animations.css);
+
+:root {
+  --mui-primary-main: #6200ea;
+  --mui-primary-light: #bb86fc;
+  --mui-primary-dark: #3700b3;
+  --mui-primary-contrast: #ffffff;
+
+  --mui-secondary-main: #03dac6;
+  --mui-secondary-light: #66fff9;
+  --mui-secondary-dark: #00a896;
+  --mui-secondary-contrast: #000000;
+
+  --mui-background-default: #ffffff;
+  --mui-background-paper: #f5f5f5;
+
+  --mui-text-primary: #000000;
+  --mui-text-secondary: #666666;
+  --mui-text-disabled: #999999;
+
+  --mui-divider: #e0e0e0;
+  --mui-outline: #000000;
+
+  --mui-error-main: rgb(186, 41, 41);
+  --mui-error-light: rgb(252, 125, 125);
+  --mui-error-dark: rgb(111, 2, 2);
+
+  --shadow-color: #ebebeb;
+  --shadow-sm: 0 0px 2px var(--shadow-color);
+  --shadow-md: 0 0px 6px var(--shadow-color);
+  --shadow-lg: 0 0px 15px var(--shadow-color);
+}
+
+[data-theme="dark"] {
+  --mui-primary-main: #bb86fc;
+  --mui-primary-light: #6200ea;
+  --mui-primary-dark: #3700b3;
+  --mui-primary-contrast: #ffffff;
+
+  --mui-secondary-main: #03dac6;
+  --mui-secondary-light: #66fff9;
+  --mui-secondary-dark: #00a896;
+  --mui-secondary-contrast: #000000;
+
+  --mui-background-default: #121212;
+  --mui-background-paper: #1e1e1e;
+
+  --mui-text-primary: #ffffff;
+  --mui-text-secondary: #b3b3b3;
+  --mui-text-disabled: #666666;
+
+  --mui-error-main: rgb(186, 41, 41);
+  --mui-error-light: rgb(252, 125, 125);
+  --mui-error-dark: rgb(111, 2, 2);
+
+  --mui-divider: #333333;
+  --mui-outline: #ffffff;
+
+  --shadow-color: #666666;
+  --shadow-sm: 0 0px 2px var(--shadow-color);
+  --shadow-md: 0 0px 6px var(--shadow-color);
+  --shadow-lg: 0 0px 15px var(--shadow-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--mui-background-paper);
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+main {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+}
+
+* {
+  color: var(--mui-text-secondary);
+  box-shadow: none;
+  border: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--mui-text-primary);
+}
+
+/* Button Base Style */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--mui-text-primary);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px var(--mui-background-paper);
+  text-transform: uppercase;
+}
+
+/* Hover & Active States */
+.button:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+  transform: translateY(1px);
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Disabled State */
+.button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Different Button Colors */
+.button.primary {
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+}
+
+.button.secondary {
+  background: linear-gradient(135deg, #ffb347, #ffcc33);
+}
+
+.button.success {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+}
+
+.button.danger {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.bg-primary-light {
+  background-color: var(--mui-primary-light);
+}
+
+.bg-primary-dark {
+  background-color: var(--mui-primary-dark);
+}
+
+.bg-primary-main {
+  background-color: var(--mui-primary-main);
+}
+
+.bg-secondary-light {
+  background-color: var(--mui-secondary-light);
+}
+
+.bg-secondary-dark {
+  background-color: var(--mui-secondary-dark);
+}
+
+.bg-secondary-main {
+  background-color: var(--mui-secondary-main);
+}
+
+.bg-background {
+  background-color: var(--mui-background-default);
+}
+
+.bg-background-paper {
+  background-color: var(--mui-background-paper);
+}
+
+.element-with-scroll {
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+.element-with-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.p-fixed {
+  position: fixed;
+}
+
+.p-sticky {
+  position: sticky;
+}
+
+.p-absolute {
+  position: absolute;
+}
+
+.absolute-center {
+  left: -50%;
+  top: -50%;
+  translate: 50% 50%;
+}
+.fixed-center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Flexbox Layout */
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.items-stretch {
+  align-items: stretch;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.self-auto {
+  align-self: auto;
+}
+
+.self-start {
+  align-self: flex-start;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+.self-center {
+  align-self: center;
+}
+
+.self-stretch {
+  align-self: stretch;
+}
+
+.self-baseline {
+  align-self: baseline;
+}
+
+.content-start {
+  align-content: flex-start;
+}
+
+.content-end {
+  align-content: flex-end;
+}
+
+.content-center {
+  align-content: center;
+}
+
+.content-between {
+  align-content: space-between;
+}
+
+.content-around {
+  align-content: space-around;
+}
+
+.content-evenly {
+  align-content: space-evenly;
+}
+
+.content-stretch {
+  align-content: stretch;
+}
+
+.flex-grow-0 {
+  flex-grow: 0;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.flex-shrink {
+  flex-shrink: 1;
+}
+
+.basis-0 {
+  flex-basis: 0;
+}
+
+.basis-1\/2 {
+  flex-basis: 50%; /* 4px */
+}
+
+.basis-1\/3 {
+  flex-basis: 33.33%; /* 8px */
+}
+
+.basis-1\/4 {
+  flex-basis: 25%; /* 16px */
+}
+
+.basis-1\/5 {
+  flex-basis: 20%; /* 32px */
+}
+
+.basis-2\/3 {
+  flex-basis: 67%; /* 64px */
+}
+
+.basis-3\/4 {
+  flex-basis: 75%; /* 128px */
+}
+
+.basis-auto {
+  flex-basis: auto;
+}
+
+.basis-full {
+  flex-basis: 100%;
+}
+
+.order-first {
+  order: -9999;
+}
+
+.order-last {
+  order: 9999;
+}
+
+.order-none {
+  order: 0;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.order-3 {
+  order: 3;
+}
+
+.order-4 {
+  order: 4;
+}
+
+.order-5 {
+  order: 5;
+}
+
+.order-6 {
+  order: 6;
+}
+
+.order-7 {
+  order: 7;
+}
+
+.order-8 {
+  order: 8;
+}
+
+.order-9 {
+  order: 9;
+}
+
+.order-10 {
+  order: 10;
+}
+.gap-0 {
+  gap: 0;
+}
+
+.gap-1 {
+  gap: 0.25rem; /* 4px */
+}
+
+.gap-2 {
+  gap: 0.5rem; /* 8px */
+}
+
+.gap-4 {
+  gap: 1rem; /* 16px */
+}
+
+.gap-8 {
+  gap: 2rem; /* 32px */
+}
+
+.gap-16 {
+  gap: 4rem; /* 64px */
+}
+
+.gap-32 {
+  gap: 8rem; /* 128px */
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-rows-2 {
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.grid-rows-3 {
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.grid-gap-4 {
+  gap: 1rem;
+}
+
+.grid-gap-8 {
+  gap: 2rem;
+}
+
+/* Width */
+.w-auto {
+  width: auto;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-1\/3 {
+  width: 33.33%;
+}
+
+.w-1\/4 {
+  width: 25%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+.w-64 {
+  width: 16rem; /* Example: 64px or any custom size */
+}
+
+/* Height */
+.h-auto {
+  height: auto;
+}
+
+.h-1\/2 {
+  height: 50%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.h-1 {
+  height: 1em;
+}
+.h-2 {
+  height: 2em;
+}
+.h-4 {
+  height: 4em;
+}
+.h-8 {
+  height: 8em;
+}
+.h-16 {
+  height: 16em;
+}
+.h-32 {
+  height: 32em;
+}
+.h-64 {
+  height: 16em;
+}
+
+/* Overflow: Determines content overflow behavior */
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-visible {
+  overflow: visible;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
+/* Overflow X and Y axis */
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.overflow-x-visible {
+  overflow-x: visible;
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+.overflow-y-visible {
+  overflow-y: visible;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.overflow-visible {
+  overflow: visible;
+}
+
+/* Border Styles */
+.border {
+  border: 1px solid var(--mui-outline);
+}
+
+.border-none {
+  border: none;
+}
+
+.border-solid {
+  border-style: solid;
+}
+
+.border-dashed {
+  border-style: dashed;
+}
+
+.border-dotted {
+  border-style: dotted;
+}
+
+.border-double {
+  border-style: double;
+}
+
+/* Border Width */
+.border-0 {
+  border-width: 0;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-4 {
+  border-width: 4px;
+}
+
+.border-8 {
+  border-width: 8px;
+}
+
+/* Border Radius */
+.rounded {
+  border-radius: 4px;
+}
+
+.rounded-sm {
+  border-radius: 2px;
+}
+
+.rounded-md {
+  border-radius: 6px;
+}
+
+.rounded-lg {
+  border-radius: 8px;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+/* Text Sizes */
+.text-xs {
+  font-size: 0.75rem; /* 12px */
+}
+
+.text-sm {
+  font-size: 0.875rem; /* 14px */
+}
+
+.text-base {
+  font-size: 1rem; /* 16px */
+}
+
+.text-lg {
+  font-size: 1.125rem; /* 18px */
+}
+
+.text-xl {
+  font-size: 1.25rem; /* 20px */
+}
+
+.text-2xl {
+  font-size: 1.5rem; /* 24px */
+}
+
+.text-3xl {
+  font-size: 1.875rem; /* 30px */
+}
+
+.text-4xl {
+  font-size: 2.25rem; /* 36px */
+}
+
+.text-5xl {
+  font-size: 3rem; /* 48px */
+}
+
+.text-6xl {
+  font-size: 3.75rem; /* 60px */
+}
+
+/* Font Weight */
+.font-thin {
+  font-weight: 100;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+.font-black {
+  font-weight: 900;
+}
+
+/* Font Family */
+.font-sans {
+  font-family: "Arial", sans-serif;
+}
+
+.font-serif {
+  font-family: "Times New Roman", serif;
+}
+
+.font-mono {
+  font-family: "Courier New", monospace;
+}
+
+/* Text Alignment */
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Text Decoration */
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-line-through {
+  text-decoration: line-through;
+}
+
+.text-no-underline {
+  text-decoration: none;
+}
+
+/* Text Transform */
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+/* Letter Spacing */
+.letter-spacing-tight {
+  letter-spacing: -0.015em;
+}
+
+.letter-spacing-normal {
+  letter-spacing: normal;
+}
+
+.letter-spacing-wide {
+  letter-spacing: 0.05em;
+}
+
+/* Line Height */
+.leading-none {
+  line-height: 1;
+}
+
+.leading-tight {
+  line-height: 1.25;
+}
+
+.leading-normal {
+  line-height: 1.5;
+}
+
+.leading-loose {
+  line-height: 2;
+}
+
+/* Margin Right */
+.mr-0 {
+  margin-right: 0;
+}
+
+.mr-1 {
+  margin-right: 0.25rem; /* 4px */
+}
+
+.mr-2 {
+  margin-right: 0.5rem; /* 8px */
+}
+
+.mr-4 {
+  margin-right: 1rem; /* 16px */
+}
+
+.mr-8 {
+  margin-right: 2rem; /* 32px */
+}
+
+.mr-16 {
+  margin-right: 4rem; /* 64px */
+}
+
+.mr-32 {
+  margin-right: 8rem; /* 128px */
+}
+
+.mt-1 {
+  margin-top: 0.25rem; /* 4px */
+}
+
+.mt-2 {
+  margin-top: 0.5rem; /* 8px */
+}
+
+.mt-4 {
+  margin-top: 1rem; /* 16px */
+}
+
+.mt-8 {
+  margin-top: 2rem; /* 32px */
+}
+
+.mt-16 {
+  margin-top: 4rem; /* 64px */
+}
+
+.mt-32 {
+  margin-top: 8rem; /* 128px */
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem; /* 4px */
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem; /* 8px */
+}
+
+.mb-4 {
+  margin-bottom: 1rem; /* 16px */
+}
+
+.mb-8 {
+  margin-bottom: 2rem; /* 32px */
+}
+
+.mb-16 {
+  margin-bottom: 4rem; /* 64px */
+}
+
+.mb-32 {
+  margin-bottom: 8rem; /* 128px */
+}
+
+/* Margin Left */
+.ml-0 {
+  margin-left: 0;
+}
+
+.ml-1 {
+  margin-left: 0.25rem; /* 4px */
+}
+
+.ml-2 {
+  margin-left: 0.5rem; /* 8px */
+}
+
+.ml-4 {
+  margin-left: 1rem; /* 16px */
+}
+
+.ml-8 {
+  margin-left: 2rem; /* 32px */
+}
+
+.ml-16 {
+  margin-left: 4rem; /* 64px */
+}
+
+.ml-32 {
+  margin-left: 8rem; /* 128px */
+}
+
+/* Margin Horizontal */
+.mx-0 {
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+.mx-1 {
+  margin-inline-start: 0.25rem; /* 4px */
+  margin-inline-end: 0.25rem; /* 4px */
+}
+
+.mx-2 {
+  margin-inline-start: 0.5rem; /* 8px */
+  margin-inline-end: 0.5rem; /* 8px */
+}
+
+.mx-4 {
+  margin-inline-start: 1rem; /* 16px */
+  margin-inline-end: 1rem; /* 16px */
+}
+
+.mx-8 {
+  margin-inline-start: 2rem; /* 32px */
+  margin-inline-end: 2rem; /* 32px */
+}
+
+.mx-16 {
+  margin-inline-start: 4rem; /* 64px */
+  margin-inline-end: 4rem; /* 64px */
+}
+
+.mx-32 {
+  margin-inline-start: 8rem; /* 128px */
+  margin-inline-end: 8rem; /* 128px */
+}
+
+/* Margin Vertical */
+.my-0 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.my-1 {
+  margin-block-start: 0.25rem; /* 4px */
+  margin-block-end: 0.25rem; /* 4px */
+}
+
+.my-2 {
+  margin-block-start: 0.5rem; /* 8px */
+  margin-block-end: 0.5rem; /* 8px */
+}
+
+.my-4 {
+  margin-block-start: 1rem; /* 16px */
+  margin-block-end: 1rem; /* 16px */
+}
+
+.my-8 {
+  margin-block-start: 2rem; /* 32px */
+  margin-block-end: 2rem; /* 32px */
+}
+
+.my-16 {
+  margin-block-start: 4rem; /* 64px */
+  margin-block-end: 4rem; /* 64px */
+}
+
+.my-32 {
+  margin-block-start: 8rem; /* 128px */
+  margin-block-end: 8rem; /* 128px */
+}
+
+/* Padding Right */
+.pr-0 {
+  padding-right: 0;
+}
+
+.pr-1 {
+  padding-right: 0.25rem; /* 4px */
+}
+
+.pr-2 {
+  padding-right: 0.5rem; /* 8px */
+}
+
+.pr-4 {
+  padding-right: 1rem; /* 16px */
+}
+
+.pr-8 {
+  padding-right: 2rem; /* 32px */
+}
+
+.pr-16 {
+  padding-right: 4rem; /* 64px */
+}
+
+.pr-32 {
+  padding-right: 8rem; /* 128px */
+}
+
+/* Padding Left */
+.pl-0 {
+  padding-left: 0;
+}
+
+.pl-1 {
+  padding-left: 0.25rem; /* 4px */
+}
+
+.pl-2 {
+  padding-left: 0.5rem; /* 8px */
+}
+
+.pl-4 {
+  padding-left: 1rem; /* 16px */
+}
+
+.pl-8 {
+  padding-left: 2rem; /* 32px */
+}
+
+.pl-16 {
+  padding-left: 4rem; /* 64px */
+}
+
+.pl-32 {
+  padding-left: 8rem; /* 128px */
+}
+
+.p-1 {
+  padding: 0.25rem; /* 4px */
+}
+
+.p-2 {
+  padding: 0.5rem; /* 8px */
+}
+
+.p-4 {
+  padding: 1rem; /* 16px */
+}
+
+.p-8 {
+  padding: 2rem; /* 32px */
+}
+
+.p-16 {
+  padding: 4rem; /* 64px */
+}
+
+.p-32 {
+  padding: 8rem; /* 128px */
+}
+
+/* Margin Right Auto */
+.mr-auto {
+  margin-right: auto;
+}
+
+/* Margin Left Auto */
+.ml-auto {
+  margin-left: auto;
+}
+
+/* Margin Horizontal (Left and Right) */
+.mx-0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.mx-1 {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.mx-16 {
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+.mx-32 {
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+
+/* Padding Horizontal (Left and Right) */
+.px-0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.px-16 {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.px-32 {
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+/* Display */
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+/* Visibility */
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+/* Cursor */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+/* Object Fit */
+.object-contain {
+  object-fit: contain;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.object-fill {
+  object-fit: fill;
+}
+
+/* ========================================
+   Fade In and Fade Out Transitions
+   ======================================== */
+
+/* Fade In Effect */
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+/* Fade Out Effect */
+.fade-out {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out.hidden {
+  opacity: 0;
+}
+
+/* ========================================
+   Scale / Zoom In and Zoom Out
+   ======================================== */
+
+/* Scale In (Zoom In) Effect */
+.scale-in {
+  transform: scale(0.9);
+  transition: transform 0.3s ease-in-out;
+}
+
+.scale-in:hover {
+  transform: scale(1);
+}
+
+/* Scale Out (Zoom Out) Effect */
+.scale-out {
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.scale-out:hover {
+  transform: scale(0.9);
+}
+
+/* ========================================
+   Slide Transitions (Left, Right, Up, Down)
+   ======================================== */
+
+/* Slide In from Left */
+.slide-in-left {
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-out;
+}
+
+.slide-in-left.visible {
+  transform: translateX(0);
+}
+
+/* Slide In from Right */
+.slide-in-right {
+  transform: translateX(100%);
+  transition: transform 0.5s ease-out;
+}
+
+.slide-in-right.visible {
+  transform: translateX(0);
+}
+
+/* Slide In from Top */
+.slide-in-top {
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-out;
+}
+
+.slide-in-top.visible {
+  transform: translateY(0);
+}
+
+/* Slide In from Bottom */
+.slide-in-bottom {
+  transform: translateY(100%);
+  transition: transform 0.5s ease-out;
+}
+
+.slide-in-bottom.visible {
+  transform: translateY(0);
+}
+
+/* ========================================
+   Color and Background Color Transitions
+   ======================================== */
+
+/* Color Change on Hover */
+.color-change {
+  color: #333;
+  transition: color 0.3s ease-in-out;
+}
+
+.color-change:hover {
+  color: #3498db;
+}
+
+/* Background Color Change on Hover */
+.bg-color-change {
+  background-color: #fff;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.bg-color-change:hover {
+  background-color: #3498db;
+}
+
+/* Background Gradient Change */
+.bg-gradient-change {
+  background: linear-gradient(45deg, #ff7e5f, #feb47b);
+  transition: background 0.5s ease-in-out;
+}
+
+.bg-gradient-change:hover {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+}
+
+/* ========================================
+   Box Shadow Transitions
+   ======================================== */
+
+.shadow-sm {
+  box-shadow: var(--shadow-sm);
+}
+
+.shadow-md {
+  box-shadow: var(--shadow-md);
+}
+
+.shadow-lg {
+  box-shadow: var(--shadow-lg);
+}
+
+/* Box Shadow on Hover */
+.shadow-hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.shadow-hover:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================
+   Border Radius Transitions
+   ======================================== */
+
+/* Rounded Corners on Hover */
+.border-radius-hover {
+  border-radius: 10px;
+  transition: border-radius 0.3s ease-in-out;
+}
+
+.border-radius-hover:hover {
+  border-radius: 25px;
+}
+
+/* ========================================
+   Height and Width Transitions
+   ======================================== */
+
+/* Expand on Hover */
+.expand-hover {
+  height: 100px;
+  width: 100px;
+  transition: height 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+.expand-hover:hover {
+  height: 150px;
+  width: 150px;
+}
+
+.square {
+  aspect-ratio: 1 / 1;
+}
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Full Width */
+.full-width {
+  width: 100%;
+}
+
+/* Centering */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Sections */
+.section {
+  padding: 40px 20px;
+}
+
+.circle-1 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.error {
+  background-color: var(--mui-primary-light);
+  padding: 30px 30px;
+  border-radius: 16px;
+  color: var(--mui-text-primary);
+  margin: 40px;
+}
+
+@media (max-width: 768px) {
+  .grid-cols-3,
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-cols-2,
+  .grid-cols-3,
+  .grid-cols-4 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .p-8 {
+    padding: 12px 12px;
+  }
+
+  .p-4 {
+    padding: 8px 8px;
+  }
+}
