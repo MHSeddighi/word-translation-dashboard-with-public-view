@@ -133,4 +133,3 @@ All changes trigger localStorage updates via a debounced save function.
 - Next & TypeScript
 - LocalStorage
 - Custom Context & Dispatch System
-````
