@@ -1,6 +1,6 @@
 # 🌍 Translator Keyword Manager
 
-A lightweight translation keyword manager built with React and TypeScript. This project allows users to manage keywords and their translations, switch between multiple language presets, and persist data locally.
+A lightweight translation keyword manager built with NextJs and TypeScript. This project allows users to manage keywords and their translations, switch between multiple language presets, and persist data locally.
 
 ---
 
@@ -12,7 +12,7 @@ A lightweight translation keyword manager built with React and TypeScript. This 
 - Debounced auto-save to localStorage
 - Drag-and-drop keyword reordering
 - Clear and modular TypeScript logic
-- Fast lookups using `Record<string, string>` map
+- Fast lookups using map
 
 ---
 
@@ -26,11 +26,9 @@ Stored in an array to preserve order and support reordering:
 keywords = ["hello", "goodbye", "thank you"];
 ```
 
-````
-
 ### Translations
 
-Stored in an object (`Record<string, string>`) for quick access:
+Stored in an object for quick access:
 
 ```ts
 translations = {
@@ -132,7 +130,7 @@ All changes trigger localStorage updates via a debounced save function.
 
 ## 🛠 Built With
 
-- React & TypeScript
+- Next & TypeScript
 - LocalStorage
 - Custom Context & Dispatch System
 ````
